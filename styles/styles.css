@@ -19,6 +19,14 @@
   --dark-color: #ccc;
   --text-color: black;
 
+
+  --color-black: #fff;
+  --color-white: #000;
+
+
+  /* background-color */
+  --background-color-white: #fff;
+
   /* fonts */
   --body-font-family: roboto, roboto-fallback;
   --heading-font-family: var(--body-font-family);
@@ -39,6 +47,9 @@
 
   /* nav height */
   --nav-height: 64px;
+
+  /* Max width Layout */
+  --max-layout-width: 1480px;
 }
 
 @font-face {
@@ -198,7 +209,7 @@ main .section {
 
 @media (width >= 900px) {
   .section > div {
-    max-width: 1200px;
+    max-width: var(--max-layout-width);
     margin: auto;
   }
 }
