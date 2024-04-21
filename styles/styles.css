@@ -20,8 +20,9 @@
   --text-color: black;
 
 
-  --color-black: #fff;
-  --color-white: #000;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-red: #c50003;
 
 
   /* background-color */
@@ -198,12 +199,12 @@ main img {
 
 /* sections */
 main .section {
-  padding: 64px 16px;
+  padding: 20px 16px;
 }
 
 @media (width >= 600px) {
   main .section {
-    padding: 64px 32px;
+    padding: 32px 16px;
   }
 }
 
