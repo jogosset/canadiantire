@@ -57,8 +57,8 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
   const button = nav.querySelector('.nav-hamburger button');
   document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
-  nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-  toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
+  nav.setAttribute('aria-expanded', expanded ? 'false' : 'false');
+  toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'false');
   button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
   // enable nav dropdown keyboard accessibility
   const navDrops = navSections.querySelectorAll('.nav-drop');
@@ -116,8 +116,10 @@ export default async function decorate(block) {
 
   // tools section - search bar and account/cart
   const navTools = nav.querySelector('.nav-tools');
-  const newSearchInput = document.createElement('input')
-  newSearchInput.classList.add('searchbar-input')
+  const newSearchInput = document.createElement('input');
+  newSearchInput.type = 'search';
+  newSearchInput.placeholder = 'Search';
+  newSearchInput.classList.add('searchbar-input');
   const navSearchWrapper = navTools.querySelector('.icon-search');
   if (navSearchWrapper) {
     navSearchWrapper.append(newSearchInput)
@@ -142,7 +144,7 @@ export default async function decorate(block) {
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
-      <span class="nav-hamburger-icon"></span><span class="hamburger-text">Shop By Flower</span>
+      <span class="nav-hamburger-icon"></span><span class="hamburger-text">Shop By Department</span>
     </button>`;
   hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
   nav.prepend(hamburger);
