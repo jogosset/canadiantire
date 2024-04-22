@@ -29,7 +29,7 @@
   --background-color-white: #fff;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback;
+  --body-font-family: "CTEastmanRoman-Bold", sans-serif;
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
@@ -200,6 +200,14 @@ main img {
 /* sections */
 main .section {
   padding: 20px 16px;
+}
+
+/* Section heading */
+main .section h4 {
+  width: 100%;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 @media (width >= 600px) {
