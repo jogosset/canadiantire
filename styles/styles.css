@@ -19,8 +19,17 @@
   --dark-color: #ccc;
   --text-color: black;
 
+
+  --color-black: #000;
+  --color-white: #fff;
+  --color-red: #c50003;
+
+
+  /* background-color */
+  --background-color-white: #fff;
+
   /* fonts */
-  --body-font-family: roboto, roboto-fallback;
+  --body-font-family: "CTEastmanRoman-Bold", sans-serif;
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
@@ -39,6 +48,9 @@
 
   /* nav height */
   --nav-height: 64px;
+
+  /* Max width Layout */
+  --max-layout-width: 1480px;
 }
 
 @font-face {
@@ -187,18 +199,31 @@ main img {
 
 /* sections */
 main .section {
-  padding: 64px 16px;
+  padding: 20px 16px;
+}
+
+/* Section heading */
+main .section h4 {
+  width: 100%;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 0;
+}
+
+main .section h4 br {
+  display: none;;
 }
 
 @media (width >= 600px) {
   main .section {
-    padding: 64px 32px;
+    padding: 32px 16px;
   }
 }
 
 @media (width >= 900px) {
   .section > div {
-    max-width: 1200px;
+    max-width: var(--max-layout-width);
     margin: auto;
   }
 }

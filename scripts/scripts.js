@@ -69,6 +69,10 @@ export function decorateMain(main) {
   decorateBlocks(main);
 }
 
+export function jsx(html, ...args) {
+  return html.slice(1).reduce((str, elem, i) => str + args[i] + elem, html[0]);
+}
+
 /**
  * Loads everything needed to get to LCP.
  * @param {Element} doc The container element

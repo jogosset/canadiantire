@@ -1,23 +1,81 @@
+.section.cards-container .cards {
+  padding: 1rem 0;
+}
+
 .cards > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
+  grid-template-columns: repeat(12, 1fr);
   grid-gap: 16px;
 }
 
 .cards > ul > li {
-  border: 1px solid var(--dark-color);
-  background-color: var(--background-color)
+  background-color: var(--background-color);
+  grid-column: span 12;
+}
+
+.cards > ul > li:hover,
+.cards > ul > li:hover a {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (width >= 390px) {
+  .cards > ul > li {
+    grid-column: span 6;
+  }
+}
+
+@media (width >= 768px) {
+  .cards > ul > li {
+    grid-column: span 6;
+  }
+}
+
+@media (width >= 992px) {
+  .cards > ul > li {
+    grid-column: span 4;
+  }
+}
+
+@media (width >= 1200px) {
+  .cards > ul > li {
+    grid-column: span 3;
+  }
 }
 
 .cards .cards-card-body {
-  margin: 16px;
+  margin: 24px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards .cards-card-body p {
+  margin-top: 0;
+}
+
+.cards .cards-card-body p:first-of-type {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.cards .cards-card-body p:nth-of-type(2) {
+  font-size: 14px;
+  line-height: 20px;
+  color: #737373;
 }
 
 .cards .cards-card-image {
   line-height: 0;
+}
+
+.cards .cards-card-image a {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .cards .cards-card-body > *:first-child {
@@ -26,6 +84,137 @@
 
 .cards > ul > li img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  /* aspect-ratio: 4 / 3; */
   object-fit: cover;
+  max-height: 210px;
+}
+
+.cards .cards-card-body .button-container a {
+  font-size: 14px;
+  line-height: 24px;;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  color: var(--color-black);
+  border-radius: unset;
+  text-decoration: underline;
+}
+
+/* Promo */
+.cards.promos .cards-card-body p:first-of-type {
+  font-size: 1.5rem;
+  margin: 16px 0 8px;
+}
+
+.cards.promos .cards-card-body .button-container {
+  margin: 0;
+}
+
+.cards.promos .cards-card-body .button-container a {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  color: var(--color-black);
+  border-radius: unset;
+  text-decoration: underline;
+  overflow: unset;
+  text-overflow: unset;
+  white-space: unset;
+  text-align: start;
+}
+
+.cards.promos > ul > li img {
+  border-radius: 4px;
+}
+
+
+/* Split Quads */
+.cards.split-quads.block {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: rgb(217, 241, 228);
+}
+
+/* Split Quads - single-grid */
+.cards.split-quads .single-grid {
+  width: 65%;
+}
+
+.cards.split-quads .single-grid .cards-card-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.cards.split-quads .single-grid > a,
+.cards.split-quads .quad-grid > a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+.cards.split-quads .single-grid .cards-card-body p:first-of-type {
+  font-size: 2.375rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.cards.split-quads .single-grid .cards-card-body p:nth-of-type(2) {
+  font-size: 1.375rem;
+  font-weight: 400;
+  margin-top: 0;
+  color: inherit;
+}
+
+.cards.split-quads .single-grid .cards-card-body {
+  margin-top: 2rem;
+}
+
+/* Split Quads - quad-grid */
+.cards.split-quads .quad-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 35%;
+}
+
+.cards.split-quads .quad-grid .cards-card-image img {
+  width: 168px; 
+  height: 168px;
+}
+
+.cards.split-quads .quad-grid > a {
+  padding: 0 12px;
+  background-color: var(--color-white);
+}
+
+.cards.split-quads .quad-grid .cards-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards.split-quads .quad-grid .cards-card-body p:nth-of-type(2) {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-red);
+}
+
+@media (width <= 992px) {
+  .cards.split-quads.block {
+    flex-direction: column;
+  }
+
+  .cards.split-quads .single-grid {
+    width: 100%;
+  }
+
+  .cards.split-quads .quad-grid {
+    width: 100%;
+  }
 }
