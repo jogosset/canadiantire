@@ -1,8 +1,20 @@
+.section.columns-container .columns.block {
+  padding: 1rem 0;
+}
+
 .columns > div {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2.5rem;
 }
 
+.columns div:nth-of-type(odd) {
+  background-color: #F0F0F0;
+}
+
+.columns div:nth-of-type(even) {
+  background-color: #E9F6E9;
+}
 .columns img {
   width: 100%;
 }
@@ -11,23 +23,64 @@
   order: 1;
 }
 
+.columns > div > div:not(.columns-img-col) {
+  padding: 24px 64px;
+}
+
 .columns > div > .columns-img-col {
   order: 0;
 }
 
 .columns > div > .columns-img-col img {
   display: block;
+  max-height: 256px;
+}
+
+.columns > div > div > p {
+  margin: 0;
+}
+
+.columns > div > div > p:first-of-type {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.columns > div > div > p:nth-of-type(2) {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.columns .button-container {
+  margin-top: 1rem;
+}
+
+.columns .button-container a {
+  font-size: 0.875rem;
+  text-decoration: unset;
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+  height: auto;
+  display: inline-block;
+  border-radius: 0;
+  background-color: var(--color-black);
+  margin: 0;
 }
 
 @media (width >= 900px) {
   .columns > div {
     align-items: center;
     flex-direction: unset;
-    gap: 32px;
   }
 
   .columns > div > div {
     flex: 1;
     order: unset;
+    width: 58%;
   }
+
+  .columns > div > .columns-img-col {
+    flex-basis: 42%;
+    max-width: 42%;
+  }
+  
 }
