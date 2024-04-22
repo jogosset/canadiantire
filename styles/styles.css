@@ -10,20 +10,18 @@
  * governing permissions and limitations under the License.
  */
 
-:root {
+ :root {
   /* colors */
-  --link-color: #035fe6;
+  --link-color: #000435;
   --link-hover-color: #136ff6;
   --background-color: white;
   --light-color: #eee;
   --dark-color: #ccc;
   --text-color: black;
 
-
   --color-black: #000;
   --color-white: #fff;
   --color-red: #c50003;
-
 
   /* background-color */
   --background-color-white: #fff;
@@ -37,6 +35,7 @@
   --body-font-size-m: 22px;
   --body-font-size-s: 18px;
   --body-font-size-xs: 16px;
+  --body-font-size-xxs: 11px;
 
   /* heading sizes */
   --heading-font-size-xxl: 48px;
@@ -45,9 +44,11 @@
   --heading-font-size-m: 24px;
   --heading-font-size-s: 20px;
   --heading-font-size-xs: 18px;
+  --heading-font-size-xxs: 14px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 151px;
+  --nav-section-height: 50px;
 
   /* Max width Layout */
   --max-layout-width: 1480px;
@@ -212,8 +213,9 @@ main .section h4 {
 }
 
 main .section h4 br {
-  display: none;;
+  display: none;
 }
+
 
 @media (width >= 600px) {
   main .section {
@@ -232,4 +234,34 @@ main .section h4 br {
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
+}
+
+
+/* cta-outline "block" */
+.cta-outline .default-content-wrapper {
+  border: solid 1px lightgray;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 0;
+}
+
+.cta-outline .default-content-wrapper h2 {
+  margin: 0;  
+  font-weight: 200;
+  font-size: var(--heading-font-size-s);
+}
+
+.cta-outline .default-content-wrapper p:first-of-type {
+  line-height: 1.1rem;
+  width: 45%;
+  max-width: 540px;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.cta-outline .default-content-wrapper p.button-container,
+.cta-outline .default-content-wrapper p.button-container a {
+  margin: 0;
 }
