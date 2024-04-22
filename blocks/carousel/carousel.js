@@ -25,10 +25,7 @@ export default async function decorate(block) {
             <div class="image-wrapper">${optimizedImage.outerHTML}</div>
           </div>
           <div class="slider-text"><strong>${brand}</strong> ${title}</div>
-          <div class="price">
-            ${price}
-            <span>Sale</span>
-          </div>
+          <div class="price">${price}</div>
         </a>
       </div>
     `);

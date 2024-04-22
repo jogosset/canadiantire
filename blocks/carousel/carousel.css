@@ -93,9 +93,9 @@
   justify-content: flex-start;
   align-items: center;
   margin-top: 1rem;
-  color: var(--color-red);
   font-size: 1rem;
   width: 100%;
+  font-weight: 700;
 }
 
 .carousel .slider-item a .price span {
@@ -107,7 +107,6 @@
   padding: .25rem;
   font-weight: bold;
   border-radius: .5rem;
-  background-color: var(--color-red);
   color: var(--color-white);
   margin-left: 0.75rem;
 }
