@@ -2,8 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--canadiantire--timwlee.hlx.page/
-- Live: https://main--canadiantire--timwlee.hlx.live/
+- Preview: https://main--canadiantire--AdobeDevXSC.hlx.page/
+- Live: https://main--canadiantire--AdobeDevXSC.hlx.live/
 
 ## Installation
 
