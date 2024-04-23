@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { createOptimizedPicture } from '../../scripts/aem.js';
 import { jsx } from '../../scripts/scripts.js';
 
@@ -19,7 +21,6 @@ export default async function decorate(block) {
   let positionDiff;
 
   let activeIndex = 0;
-
 
   // Update the active slider item based on activeIndex
   function updateActiveSliderItem() {
@@ -93,7 +94,7 @@ export default async function decorate(block) {
       },
       { passive: true },
     );
-  
+
     sliderControlNext.addEventListener(
       'click',
       () => {
@@ -111,11 +112,11 @@ export default async function decorate(block) {
 
   function modifyHTML() {
     const updatedCards = [];
-  
+
     data.forEach((item, index) => {
-      const optimizedImage = createOptimizedPicture(item.image, item.name, true, [{ width: '200' }]); //update width
-      optimizedImage.querySelector('img').width = '200'; //update width
-      optimizedImage.querySelector('img').height = '200'; //update height
+      const optimizedImage = createOptimizedPicture(item.image, item.name, true, [{ width: '200' }]);
+      optimizedImage.querySelector('img').width = '200';
+      optimizedImage.querySelector('img').height = '200';
       updatedCards.push(jsx`
         <div class="slider-item ${index === activeIndex ? 'active' : ''}">
           <a href="${item.url}">

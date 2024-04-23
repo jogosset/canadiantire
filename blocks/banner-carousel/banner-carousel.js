@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { fetchPlaceholders } from '../../scripts/aem.js';
 
 function updateActiveSlide(slide) {

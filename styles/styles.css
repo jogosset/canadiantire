@@ -18,7 +18,6 @@
   --light-color: #eee;
   --dark-color: #ccc;
   --text-color: black;
-
   --color-black: #000;
   --color-white: #fff;
   --color-red: #c50003;
@@ -258,7 +257,7 @@ main .section.highlight {
   width: 45%;
   max-width: 540px;
   text-align: center;
-  margin: 0 0 20px 0;
+  margin: 0 0 20px;
 }
 
 .cta-outline .default-content-wrapper p.button-container,
