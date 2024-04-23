@@ -299,6 +299,11 @@ header nav .nav-sections ul > li > ul > li {
   font-weight: 500;
 }
 
+header nav .nav-sections li a:hover {
+  font-weight: 700;
+  color: #ffd92a;
+}
+
 @media (width >= 900px) {
   header nav .nav-sections {
     display: block;
