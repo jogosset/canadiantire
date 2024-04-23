@@ -98,6 +98,10 @@
   font-weight: 700;
 }
 
+.carousel .slider-item a .price.sale {
+  color: var(--color-red);
+}
+
 .carousel .slider-item a .price span {
   font-size: .75rem;
   line-height: 1.25rem;
@@ -107,8 +111,9 @@
   padding: .25rem;
   font-weight: bold;
   border-radius: .5rem;
-  color: var(--color-white);
   margin-left: 0.75rem;
+  color: var(--color-white);
+  background-color: var(--color-red);
 }
 
 .carousel .slider-item a:hover {
