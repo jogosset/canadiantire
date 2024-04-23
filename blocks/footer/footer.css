@@ -2,13 +2,32 @@ footer {
   padding: 2rem;
   background-color: var(--light-color);
   font-size: var(--body-font-size-s);
+  background: #262626;
+  color: var(--color-white);
 }
 
 footer .footer {
-  max-width: 1200px;
+  max-width: 1480px;
   margin: auto;
 }
 
 footer .footer p {
   margin: 0;
+}
+
+footer .footer a {
+  color: inherit;
+}
+
+footer .footer > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer .footer > div .section {
+  width: 20%;
+}
+
+footer .footer > div .section:nth-child(n+6) {
+  width: 100%;
 }
