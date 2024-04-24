@@ -479,6 +479,10 @@ header nav .nav-tools .searchbar-wrapper {
   justify-content: space-between;
 }
 
+.order br {
+  display: none;
+}
+
 /* delivering to */
 .order > div:first-of-type {
   line-height: 1rem;
@@ -505,13 +509,12 @@ header nav .nav-tools .searchbar-wrapper {
 }
 
 /* account & cart */
-.order > div:nth-of-type(2) > div > p,
-.order > div:nth-of-type(3) > div > p {
+.order > div:nth-of-type(2) > div,
+.order > div:nth-of-type(3) > div {
   font-size: .875rem;
   display: flex;
   flex-direction: column;
   min-width: 65px;
-  gap: 2px;
 }
 
 .order > div:nth-of-type(2) > div > p br,
