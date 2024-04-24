@@ -264,3 +264,14 @@ main .section.highlight {
 .cta-outline .default-content-wrapper p.button-container a {
   margin: 0;
 }
+
+/* Experimentation Widget Styling */
+.hlx-preview-overlay .hlx-badge {
+  padding: 1rem 2rem;
+  font-size: 18px;
+  line-height: normal;
+}
+
+.hlx-preview-overlay .hlx-badge .hlx-popup * {
+  font-size: 14px;
+}
