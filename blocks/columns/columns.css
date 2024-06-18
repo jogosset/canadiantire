@@ -10,11 +10,17 @@
   margin-bottom: 2.5rem;
 }
 
-.columns:not(.fifty-fifty) div:nth-of-type(odd) {
+@media (width >= 900px) {
+  .columns.query:not(.fifty-fifty) > div:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+.columns:not(.fifty-fifty) > div:nth-of-type(odd) {
   background-color: #F0F0F0;
 }
 
-.columns:not(.fifty-fifty) div:nth-of-type(even) {
+.columns:not(.fifty-fifty) > div:nth-of-type(even){
   background-color: #E9F6E9;
 }
 .columns img {
