@@ -3,15 +3,14 @@ import AdobeAemHeadlessClientJs from 'https://cdn.skypack.dev/pin/@adobe/aem-hea
 import { getConfigValue } from '../../scripts/configs.js';
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
-async function initialize() {
+async function initialize(promotionQuery) {
   try {
     const AEM_HOST = await getConfigValue('aem-host');
     const AEM_GRAPHQL_ENDPOINT = await getConfigValue('aem-graphql-endpoint');
     const AEM_HEADLESS_CLIENT = new AdobeAemHeadlessClientJs({ serviceURL: AEM_HOST });
-    const query = '/allPromotions';
     let dataObj = {};
 
-    dataObj = await AEM_HEADLESS_CLIENT.runPersistedQuery(AEM_GRAPHQL_ENDPOINT + query);
+    dataObj = await AEM_HEADLESS_CLIENT.runPersistedQuery(AEM_GRAPHQL_ENDPOINT + promotionQuery);
     const data = dataObj?.data?.promotionList?.items;
     return data;
 
@@ -22,10 +21,13 @@ async function initialize() {
 }
 
 export async function initQueryColumns(block) {
-  const data = await initialize();
-  // console.log("data list: ", data);
-  const updatedColumnItems = [];
+  const innerDiv = block.querySelector('div > div:nth-child(2)');
+  const promotionsText = innerDiv.textContent;
+  let data = [];
+  let updatedColumnItems = [];
 
+  data = await initialize(promotionsText);
+  
   // create html
   data.forEach((item) => {
     const imagePath = item.promotionImage?._path;
