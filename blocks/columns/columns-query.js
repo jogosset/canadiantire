@@ -51,4 +51,5 @@ export async function initQueryColumns(block) {
   });
   
   block.innerHTML = updatedColumnItems.join('');
+  block.style.display = 'block';
 }

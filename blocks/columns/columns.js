@@ -1,6 +1,7 @@
 import { initQueryColumns } from './columns-query.js';
 
 export default function decorate(block) {
+  block.style.display = 'none';
   const isQueryBlock = block.classList.contains('query');
 
   if (isQueryBlock) {
@@ -22,5 +23,6 @@ export default function decorate(block) {
         }
       });
     });
+    block.style.display = 'block';
   }
 }
