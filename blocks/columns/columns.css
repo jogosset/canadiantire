@@ -10,7 +10,7 @@
   margin-bottom: 2.5rem;
 }
 
-@media (width >= 900px) {
+@media (min-width: 900px) {
   .columns.query:not(.fifty-fifty) > div:nth-of-type(even) {
     flex-direction: row-reverse;
   }
@@ -20,9 +20,10 @@
   background-color: #F0F0F0;
 }
 
-.columns:not(.fifty-fifty) > div:nth-of-type(even){
+.columns:not(.fifty-fifty) > div:nth-of-type(even) {
   background-color: #E9F6E9;
 }
+
 .columns img {
   width: 100%;
 }
@@ -32,7 +33,7 @@
 }
 
 .columns > div > div:not(.columns-img-col) {
-  padding: 24px 64px;
+  padding: 1.5rem;
 }
 
 .columns > div > .columns-img-col {
@@ -74,7 +75,7 @@
   margin: 0;
 }
 
-@media (width >= 900px) {
+@media (min-width: 900px) {
   .columns > div {
     align-items: center;
     flex-direction: unset;
@@ -90,7 +91,10 @@
     flex-basis: 42%;
     max-width: 42%;
   }
-  
+
+  .columns > div > div:not(.columns-img-col) {
+    padding: 24px 64px;
+  }
 }
 
 /* fifty-fifty */
@@ -164,7 +168,7 @@
   padding: 24px 15px;
 }
 
-@media (width >= 900px) {
+@media (min-width: 1200px) {
   .section.full-width .columns.full-width div > div:not(.columns-img-col) {
     padding: 24px 7.5rem;
   }
@@ -177,6 +181,7 @@
 /* Highlight */
 .columns.highlight > div {
   background-color: #C8E6CA !important;
+  margin-bottom: 0;
 }
 
 /* Columns Row */
@@ -185,4 +190,51 @@
   gap: 20px;
   max-width: 1480px;
   margin: 0 auto;
+}
+
+.section.columns-row .columns-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+.section.columns-row .columns > div > .columns-img-col img {
+  max-height: 420px;
+  object-fit: cover;
+}
+
+.section.columns-row .columns.highlight > div {
+  background-color: #E9F6E9 !important;
+}
+
+@media (max-width: 1200px) {
+  .section.columns-row .columns.highlight > div {
+    flex-direction: column;
+  }
+
+  .section.columns-row .columns > div > div {
+    flex: unset;
+    width: unset;
+  }
+
+  .section.columns-row .columns > div > .columns-img-col {
+    flex-basis: unset;
+    max-width: unset;
+    width: 100%;
+  }
+
+  .section.columns-row .columns > div > .columns-img-col img {
+    max-height: 256px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  .section.columns-row .columns-wrapper:first-of-type .columns > div {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 768px) {
+  .section.columns-row {
+    flex-direction: column;
+  }
 }
