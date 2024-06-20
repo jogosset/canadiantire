@@ -7,6 +7,15 @@
   grid-gap: 16px;
 }
 
+.gallery.large > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(337px, 1fr));
+  grid-gap: 16px;
+}
+
 .gallery > ul > li {
   background-color: var(--background-color)
 }
@@ -45,3 +54,4 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
