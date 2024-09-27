@@ -2,8 +2,8 @@
 Demo site for Canadian Tire Corp.
 
 ## Environments
-- Preview: https://main--canadiantire--AdobeDevXSC.hlx.page/
-- Live: https://main--canadiantire--AdobeDevXSC.hlx.live/
+- Preview: https://main--canadiantire--jogosset.hlx.page/
+- Live: https://main--canadiantire--jogosset.hlx.live/
 
 ## Installation
 
